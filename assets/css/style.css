@@ -398,27 +398,32 @@ p {
   height: 100%;
   border-bottom: 1px solid #fff;
 }
-.tourist-feedback__content {
-  height: 100%;
+.tourist-feedback__main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tourist-feedback__container {
+  background-color: #333333;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
 }
-.tourist-feedback__content h3 {
-  margin: 12.8rem 0 9rem 0;
-}
-.tourist-feedback__article {
-  position: relative;
+.tourist-feedback__imag {
   width: 100%;
-  background-color: #333333;
-  min-height: 284px;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 0 8.2rem 0;
 }
-.tourist-feedback__article-text {
-  padding: 5rem 2.5rem 3.9rem 6.2rem;
+.tourist-feedback h3 {
+  font-weight: 600;
+  font-size: 36px;
+  margin: 12.8rem 0 9rem 0;
+  font-family: monospace;
 }
 .tourist-feedback h5 {
   color: #fff;
@@ -429,24 +434,40 @@ p {
   letter-spacing: -1px;
   margin-bottom: 1rem;
 }
-.tourist-feedback__quote {
-  text-align: justify;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.6rem;
-  letter-spacing: -1.1px;
+.tourist-feedback p {
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0 0 30px 0;
 }
-.tourist-feedback .icon-quote {
-  position: relative;
-  width: 3rem;
-  height: 2rem;
-  display: inline-block;
-  margin: 0 0 1.4rem 0;
+.tourist-feedback__imag {
+  height: 300px;
+  width: 100%;
+  background: url("../img/feedback-img.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
-.tourist-feedback .icon-quote::before {
-  position: absolute;
-  top: -2.9rem;
+.tourist-feedback__container {
+  margin: 60px 45px 55px;
+}
+@media screen and (min-width: 768px) {
+  .tourist-feedback__container {
+    width: 100%;
+    flex-direction: row;
+  }
+  .tourist-feedback__imag {
+    min-width: 360px;
+    height: 420px;
+  }
+  .tourist-feedback__text-container {
+    margin: 0 60px;
+    max-width: 660px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tourist-feedback__container {
+    max-width: 1200px;
+  }
 }
 
 .footer {
